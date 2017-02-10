@@ -3,10 +3,11 @@ if (window.top === window) {
 	window.addEventListener("keydown", keypressHandlerForAllOpenPages, false);
 
 	//filter events for out tab by URL
-	var patt = new RegExp("vk.com");
+	const patt = new RegExp("vk.com");
 	if (patt.test(window.location.host)) {
 		safari.self.addEventListener("message", vkCMD, false);
 
+		//this for changing page title with playing track title
 		var observer11 = new MutationObserver(trackTitleChangedHandler),
         elTarget = document.querySelector('div.top_audio_player_title_wrap'),
         objConfig = {
@@ -26,7 +27,7 @@ if (window.top === window) {
 // ALT+F9 - next
 // ALT+F11 - vol up
 // ALT+F12 - vol down
-var allowExtentionKeys = ["F7", "F8", "F9", "F11","F12"];
+const allowExtentionKeys = ["F7", "F8", "F9", "F11","F12"];
 function keypressHandlerForAllOpenPages() 
 {
 	const s = safari.self.tab;
@@ -42,7 +43,7 @@ function keypressHandlerForAllOpenPages()
 // - cmd.name - extention cmd ID
 // - cmd.message - extention cmd for web
 function vkCMD(cmd) { 
-	console.log(cmd);
+	//console.log(cmd);
 	var name = cmd.name;	
 	var message = cmd.message;
 	if (name == "vkPlayerControl") {

@@ -8,19 +8,19 @@
 
 			function onKeypressHandlerForAllOpenPages(msgEvent) {
 				console.log(msgEvent);
-    			var messageName = msgEvent.name;
+    			const messageName = msgEvent.name;
 				if (messageName == "keypressHandler") {
-					var keyCode = msgEvent.message;
+					const keyCode = msgEvent.message;
 
 							//http://web.archive.org/web/20100501161453/http://www.classicteck.com/rbarticles/mackeyboard.php
 
-					var cmd_message =  kh_map_cmd.get(keyCode);
+					const cmd_message =  kh_map_cmd.get(keyCode);
 					if (cmd_message === undefined) {
 						return;
 					}
 
 
-					var patt = new RegExp("/vk.com/");
+					const patt = new RegExp("/vk.com/");
 					safari.application.browserWindows.forEach(function(item, i) {
 	  					item.tabs.forEach(function(tab, j) {
 	  						    if (patt.test(tab.url)) {
@@ -41,7 +41,7 @@
 
 //http://web.archive.org/web/20100501161453/http://www.classicteck.com/rbarticles/mackeyboard.php
                 // mac keys
-			var keypressHandlerMapCMD = [
+			const keypressHandlerMapCMD = [
 				["118", "prew"], 
 				["119", "playtoggle"],
 				["120", "next"], 
