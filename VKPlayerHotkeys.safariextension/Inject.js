@@ -24,13 +24,14 @@ if (window.top === window) {
 // ALT+F7 - back
 // ALT+F8 - play
 // ALT+F9 - next
-// ALT+ARROW_UP - vol up
-// ALT+ARROW_DOWN - vol down
+// ALT+F11 - vol up
+// ALT+F12 - vol down
+var allowExtentionKeys = ["F7", "F8", "F9", "F11","F12"];
 function keypressHandlerForAllOpenPages() 
 {
 	const s = safari.self.tab;
 	const e = event;
-	if ( e.altKey && event.target.nodeName.toLowerCase() !== 'input')
+	if ( e.altKey && allowExtentionKeys.indexOf(e.keyIdentifier)!=-1 && event.target.nodeName.toLowerCase() !== 'input')
 	{      
 		safari.self.tab.dispatchMessage("keypressHandler",e.keyCode.toString());
 	}
@@ -73,7 +74,7 @@ function vkCMD(cmd) {
 function actionForClass(classElm)
 {
 	var x = document.getElementsByClassName(classElm);
-	if (x === undefined) { return; }
+	if (x === undefined || x.length == 0) { return; }
 	// console.log(x);
 	var clickEvent = new MouseEvent("click", {
     "view": window,
