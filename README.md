@@ -6,7 +6,7 @@ Also it demonstrate how to handle keyboard events and transfer messages it to th
 
 #How to:
 -  open https://vk.com/
--  play music trac
+-  play music track
 -  press ALT+F9 from the other tabs or send through AppleScript/Services to play next track.
 
 #Extention handle keyboard events 
