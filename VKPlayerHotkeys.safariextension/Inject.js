@@ -1,7 +1,23 @@
 
 if (window.top === window) {
 	window.addEventListener("keydown", keypressHandlerForAllOpenPages, false);
-	safari.self.addEventListener("message", vkCMD, false);
+
+	//filter events for out tab by URL
+	var patt = new RegExp("vk.com");
+	if (patt.test(window.location.host)) {
+		safari.self.addEventListener("message", vkCMD, false);
+
+		var observer11 = new MutationObserver(trackTitleChangedHandler),
+        elTarget = document.querySelector('div.top_audio_player_title_wrap'),
+        objConfig = {
+            childList: true,
+            subtree : false,
+            attributes: false, 
+            characterData : false
+        };
+		observer11.observe(elTarget, objConfig);
+		// //observer11.disconnect(); //unUbserve
+	}
 }
 
 //will run in active tab
@@ -57,15 +73,23 @@ function vkCMD(cmd) {
 function actionForClass(classElm)
 {
 	var x = document.getElementsByClassName(classElm);
+	if (x === undefined) { return; }
 	// console.log(x);
-	// var clickEvent = new MouseEvent("click", {
- //    "view": window,
- //    "bubbles": true,
- //    "cancelable": false
-	// });
-	// x[0].dispatchEvent(clickEvent);
-	var ev = new Event("click", {"bubbles":true, "cancelable":false});
-	x[0].dispatchEvent(ev);
+	var clickEvent = new MouseEvent("click", {
+    "view": window,
+    "bubbles": true,
+    "cancelable": true
+	});
+	x[0].dispatchEvent(clickEvent);
 
-	
+	// var ev = new Event("click", {"bubbles":true, "cancelable":true});
+	// x[0].dispatchEvent(ev);	
+}
+
+function trackTitleChangedHandler (mutations) {
+	var track_title = document.querySelector('div.top_audio_player_title');
+	document.title= track_title.innerText;
+	 //    mutations.forEach(function(mutation){
+		// 	console.log(mutation.type);
+		// });    
 }
