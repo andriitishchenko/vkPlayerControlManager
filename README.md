@@ -16,5 +16,5 @@ Also it demonstrate how to handle keyboard events and transfer messages it to th
 -  ALT+ARROW_UP - no action on VK, reserved for volume control
 -  ALT+ARROW_DOWN - no action on VK, reserved for volume control
 
-#Download
+#Download signed extension
 https://github.com/andriitishchenko/vkPlayerControlManager/raw/master/VKPlayerHotkeys.safariextz
