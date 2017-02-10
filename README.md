@@ -13,8 +13,8 @@ Also it demonstrate how to handle keyboard events and transfer messages it to th
 -  ALT+F7 - play prev
 -  ALT+F8 - play/pause
 -  ALT+F9 - play next
--  ALT+ARROW_UP - no action on VK
--  ALT+ARROW_DOWN - no action on VK
+-  ALT+ARROW_UP - no action on VK, reserved for volume control
+-  ALT+ARROW_DOWN - no action on VK, reserved for volume control
 
 #Download
 https://github.com/andriitishchenko/vkPlayerControlManager/raw/master/VKPlayerHotkeys.safariextz
