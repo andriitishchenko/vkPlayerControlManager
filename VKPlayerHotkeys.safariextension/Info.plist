@@ -9,7 +9,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>VKPlayerHotkeys</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.vkplayerhotkeys</string>
+	<string>info.atfop.vkplayerhotkeys</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
@@ -23,7 +23,7 @@
 	</dict>
 	<key>Companion Bundle Identifier</key>
 	<array>
-		<string>atfop</string>
+		<string>atfop.info</string>
 	</array>
 	<key>Content</key>
 	<dict>
@@ -51,5 +51,9 @@
 			<string>All</string>
 		</dict>
 	</dict>
+	<key>Update Manifest URL</key>
+	<string>https://github.com/andriitishchenko/vkPlayerControlManager/blob/master/VKPlayerHotkeys.safariextz</string>
+	<key>Website</key>
+	<string>https://github.com/andriitishchenko/vkPlayerControlManager</string>
 </dict>
 </plist>

@@ -88,7 +88,7 @@ function actionForClass(classElm)
 
 function trackTitleChangedHandler (mutations) {
 	var track_title = document.querySelector('div.top_audio_player_title');
-	document.title= track_title.innerText;
+	document.title = "VK Music: " + track_title.innerText;
 	 //    mutations.forEach(function(mutation){
 		// 	console.log(mutation.type);
 		// });    
