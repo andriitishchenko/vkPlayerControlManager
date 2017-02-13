@@ -61,15 +61,22 @@ function vkCMD(cmd) {
 		  	actionForClass("top_audio_player_btn top_audio_player_prev");
 		    break;
 		  case "volumeup":
-		  	actionForClass("audio_page_player_ctrl audio_page_player_play");
+		  	//actionForClass("audio_page_player_ctrl audio_page_player_play");
+		  	cmd_Volume(0.3);
 		  break;
 		  case "volumedown":
-		  	actionForClass("audio_page_player_ctrl audio_page_player_play");
+		  	cmd_Volume(-0.3);
 		    break;
 		  default:break;
 		  
 		}
 	}
+}
+
+function cmd_Volume(value)
+{
+	//var _val = window.getAudioPlayer().getVolume();
+	//getAudioPlayer().setVolume(_val+value);
 }
 
 function actionForClass(classElm)
