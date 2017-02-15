@@ -7,18 +7,14 @@
 			var kh_map_cmd;
 
 			function onKeypressHandlerForAllOpenPages(msgEvent) {
-				console.log(msgEvent);
+				// console.log(msgEvent);
     			const messageName = msgEvent.name;
 				if (messageName == "keypressHandler") {
 					const keyCode = msgEvent.message;
-
-							//http://web.archive.org/web/20100501161453/http://www.classicteck.com/rbarticles/mackeyboard.php
-
 					const cmd_message =  kh_map_cmd.get(keyCode);
 					if (cmd_message === undefined) {
 						return;
 					}
-
 
 					const patt = new RegExp("/vk.com/");
 					safari.application.browserWindows.forEach(function(item, i) {
@@ -26,9 +22,7 @@
 	  						    if (patt.test(tab.url)) {
 	  						    	tab.page.dispatchMessage('vkPlayerControl',cmd_message);
 	  						    }
-	  						    // console.log( j );
 	  					});
-	  					// console.log( i );
 					});
 				}    
 			}
@@ -45,8 +39,8 @@
 				["118", "prew"], 
 				["119", "playtoggle"],
 				["120", "next"], 
-				["122", "volumeup"], 
-				["123", "volumedown"], 
+				["122", "volumedown"], 
+				["123", "volumeup"], 
 				];
 
 				kh_map_cmd = new Map(keypressHandlerMapCMD);
