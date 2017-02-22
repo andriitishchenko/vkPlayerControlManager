@@ -8,10 +8,13 @@ Also it demonstrate how to handle keyboard events and transfer messages it to th
 -  open https://vk.com/
 -  play music track
 -  while Safari active press ALT+F9 from any other tab to play next track.
+
 0r
 - send keystroke through AppleScript/Services
+
 0r
 - use vkKeyBind agent app. While it running the ALT+F7 and other shurtcuts will be routed to Safari.
+!You must add the app to trusted for handling keyboard events!
 
 #Extention handle keyboard events 
 -  ALT+F7 - play prev
