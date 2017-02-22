@@ -1,0 +1,360 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A314D1A1E55076F00A0627B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A314D191E55076F00A0627B /* Carbon.framework */; };
+		4A314D1C1E55079900A0627B /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A314D1B1E55079900A0627B /* ApplicationServices.framework */; };
+		4A59D66A1E5646B7005B02F0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A59D6691E5646B7005B02F0 /* CoreData.framework */; };
+		4A59DF9F1E5B9BF1004FEA04 /* KeyProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A59DF9E1E5B9BF1004FEA04 /* KeyProcessor.m */; };
+		4ABB55E61E54EFA400FEDA74 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB55E51E54EFA400FEDA74 /* AppDelegate.m */; };
+		4ABB55E91E54EFA400FEDA74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB55E81E54EFA400FEDA74 /* main.m */; };
+		4ABB55EC1E54EFA400FEDA74 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB55EB1E54EFA400FEDA74 /* ViewController.m */; };
+		4ABB55EE1E54EFA400FEDA74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ABB55ED1E54EFA400FEDA74 /* Assets.xcassets */; };
+		4ABB55F11E54EFA400FEDA74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ABB55EF1E54EFA400FEDA74 /* Main.storyboard */; };
+		4ABB55F91E54F13000FEDA74 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ABB55F81E54F13000FEDA74 /* icon.png */; };
+		4ABB55FD1E54F62400FEDA74 /* icon_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ABB55FC1E54F62400FEDA74 /* icon_menu@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4A314D191E55076F00A0627B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		4A314D1B1E55079900A0627B /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		4A59D6691E5646B7005B02F0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4A59DF9D1E5B9BF1004FEA04 /* KeyProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyProcessor.h; sourceTree = "<group>"; };
+		4A59DF9E1E5B9BF1004FEA04 /* KeyProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyProcessor.m; sourceTree = "<group>"; };
+		4ABB55E11E54EFA400FEDA74 /* vkKeyBind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vkKeyBind.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ABB55E41E54EFA400FEDA74 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4ABB55E51E54EFA400FEDA74 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4ABB55E81E54EFA400FEDA74 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4ABB55EA1E54EFA400FEDA74 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4ABB55EB1E54EFA400FEDA74 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4ABB55ED1E54EFA400FEDA74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4ABB55F01E54EFA400FEDA74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4ABB55F21E54EFA400FEDA74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4ABB55F81E54F13000FEDA74 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		4ABB55FC1E54F62400FEDA74 /* icon_menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_menu@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4ABB55DE1E54EFA300FEDA74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A59D66A1E5646B7005B02F0 /* CoreData.framework in Frameworks */,
+				4A314D1C1E55079900A0627B /* ApplicationServices.framework in Frameworks */,
+				4A314D1A1E55076F00A0627B /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A314D181E55076F00A0627B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A59D6691E5646B7005B02F0 /* CoreData.framework */,
+				4A314D1B1E55079900A0627B /* ApplicationServices.framework */,
+				4A314D191E55076F00A0627B /* Carbon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4ABB55D81E54EFA300FEDA74 = {
+			isa = PBXGroup;
+			children = (
+				4ABB55E31E54EFA400FEDA74 /* vkKeyBind */,
+				4ABB55E21E54EFA400FEDA74 /* Products */,
+				4A314D181E55076F00A0627B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4ABB55E21E54EFA400FEDA74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4ABB55E11E54EFA400FEDA74 /* vkKeyBind.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4ABB55E31E54EFA400FEDA74 /* vkKeyBind */ = {
+			isa = PBXGroup;
+			children = (
+				4ABB55E41E54EFA400FEDA74 /* AppDelegate.h */,
+				4ABB55E51E54EFA400FEDA74 /* AppDelegate.m */,
+				4ABB55ED1E54EFA400FEDA74 /* Assets.xcassets */,
+				4ABB55F21E54EFA400FEDA74 /* Info.plist */,
+				4A59DF9D1E5B9BF1004FEA04 /* KeyProcessor.h */,
+				4A59DF9E1E5B9BF1004FEA04 /* KeyProcessor.m */,
+				4ABB55EF1E54EFA400FEDA74 /* Main.storyboard */,
+				4ABB55E71E54EFA400FEDA74 /* Supporting Files */,
+				4ABB55EA1E54EFA400FEDA74 /* ViewController.h */,
+				4ABB55EB1E54EFA400FEDA74 /* ViewController.m */,
+			);
+			path = vkKeyBind;
+			sourceTree = "<group>";
+		};
+		4ABB55E71E54EFA400FEDA74 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4ABB55FC1E54F62400FEDA74 /* icon_menu@2x.png */,
+				4ABB55F81E54F13000FEDA74 /* icon.png */,
+				4ABB55E81E54EFA400FEDA74 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4ABB55E01E54EFA300FEDA74 /* vkKeyBind */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4ABB55F51E54EFA400FEDA74 /* Build configuration list for PBXNativeTarget "vkKeyBind" */;
+			buildPhases = (
+				4ABB55DD1E54EFA300FEDA74 /* Sources */,
+				4ABB55DE1E54EFA300FEDA74 /* Frameworks */,
+				4ABB55DF1E54EFA300FEDA74 /* Resources */,
+				4A0B59F61E5D2181002197CA /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = vkKeyBind;
+			productName = vkKeyBind;
+			productReference = 4ABB55E11E54EFA400FEDA74 /* vkKeyBind.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4ABB55D91E54EFA300FEDA74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = test;
+				TargetAttributes = {
+					4ABB55E01E54EFA300FEDA74 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = J4NANQ9H36;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4ABB55DC1E54EFA300FEDA74 /* Build configuration list for PBXProject "vkKeyBind" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4ABB55D81E54EFA300FEDA74;
+			productRefGroup = 4ABB55E21E54EFA400FEDA74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4ABB55E01E54EFA300FEDA74 /* vkKeyBind */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4ABB55DF1E54EFA300FEDA74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ABB55EE1E54EFA400FEDA74 /* Assets.xcassets in Resources */,
+				4ABB55FD1E54F62400FEDA74 /* icon_menu@2x.png in Resources */,
+				4ABB55F11E54EFA400FEDA74 /* Main.storyboard in Resources */,
+				4ABB55F91E54F13000FEDA74 /* icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A0B59F61E5D2181002197CA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -aR \"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}\" \"${PROJECT_DIR}/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4ABB55DD1E54EFA300FEDA74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ABB55EC1E54EFA400FEDA74 /* ViewController.m in Sources */,
+				4A59DF9F1E5B9BF1004FEA04 /* KeyProcessor.m in Sources */,
+				4ABB55E91E54EFA400FEDA74 /* main.m in Sources */,
+				4ABB55E61E54EFA400FEDA74 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4ABB55EF1E54EFA400FEDA74 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4ABB55F01E54EFA400FEDA74 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4ABB55F31E54EFA400FEDA74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4ABB55F41E54EFA400FEDA74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4ABB55F61E54EFA400FEDA74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = J4NANQ9H36;
+				INFOPLIST_FILE = vkKeyBind/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vkKeyBind;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4ABB55F71E54EFA400FEDA74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = J4NANQ9H36;
+				INFOPLIST_FILE = vkKeyBind/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vkKeyBind;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4ABB55DC1E54EFA300FEDA74 /* Build configuration list for PBXProject "vkKeyBind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ABB55F31E54EFA400FEDA74 /* Debug */,
+				4ABB55F41E54EFA400FEDA74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4ABB55F51E54EFA400FEDA74 /* Build configuration list for PBXNativeTarget "vkKeyBind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ABB55F61E54EFA400FEDA74 /* Debug */,
+				4ABB55F71E54EFA400FEDA74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4ABB55D91E54EFA300FEDA74 /* Project object */;
+}
