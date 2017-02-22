@@ -28,6 +28,6 @@ https://github.com/andriitishchenko/vkPlayerControlManager/raw/master/VKPlayerHo
 
 #For developers:
 
-1 to make works unsigned extension in Safari need select: Safari->Developer->Allow unsigned Estensions
+1 to make works unsigned extension in Safari need select: **Safari->Developer->Allow unsigned Estensions**
 
-2 to allow handling keyboard events need add to trusted apps in Settings->Security&Privacy->Accessibility both Xcode and builded app.
+2 to allow handling keyboard events need add to trusted apps in **Settings->Security&Privacy->Accessibility** both **Xcode** and **builded app**.
