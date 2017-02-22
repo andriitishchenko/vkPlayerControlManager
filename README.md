@@ -25,3 +25,9 @@ Also it demonstrate how to handle keyboard events and transfer messages it to th
 
 #Download signed extension
 https://github.com/andriitishchenko/vkPlayerControlManager/raw/master/VKPlayerHotkeys.safariextz
+
+#For developers:
+
+1 to make works unsigned extension in Safari need select: Safari->Developer->Allow unsigned Estensions
+
+2 to allow handling keyboard events need add to trusted apps in Settings->Security&Privacy->Accessibility both Xcode and builded app.
