@@ -148,11 +148,11 @@ static NSDictionary* map;
         NSEventModifierFlags flagsP = event.modifierFlags;
         NSNumber*mod = [map objectForKey: @(event.keyCode)];
         if (mod.integerValue == (NSInteger)flagsP) {
-            NSArray*apps = [NSRunningApplication runningApplicationsWithBundleIdentifier: safari_id];
-            NSRunningApplication*app = [apps firstObject];
-            if (app && app.active == NO) {
+//            NSArray*apps = [NSRunningApplication runningApplicationsWithBundleIdentifier: safari_id];
+//            NSRunningApplication*app = [apps firstObject];
+//            if (app && app.active == NO) {
                 [self sendKeyCode:event.keyCode];
-            }
+//            }
         }
     }
 }
