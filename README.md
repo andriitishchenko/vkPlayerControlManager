@@ -26,6 +26,9 @@ Also it demonstrate how to handle keyboard events and transfer messages it to th
 #Download signed extension
 https://github.com/andriitishchenko/vkPlayerControlManager/raw/master/VKPlayerHotkeys.safariextz
 
+#Download signed agent
+https://github.com/andriitishchenko/vkPlayerControlManager/raw/master/vkKeyBind.zip
+
 #For developers:
 
 1 to make works unsigned extension in Safari need select: **Safari->Developer->Allow unsigned Estensions**
