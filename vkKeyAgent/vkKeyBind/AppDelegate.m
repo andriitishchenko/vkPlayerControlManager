@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "DB.h"
 #import "KeyProcessor.h"
 
 @interface AppDelegate ()
@@ -37,7 +36,7 @@ static NSDictionary* map;
     icon.template = YES;
     
     _statusItem.button.image = icon;
-    _statusItem.toolTip = @"ctrl+click to QUIT\n alt+F7 - prew\n alt+F8 - play\n alt+F9 - next";
+    _statusItem.toolTip = @"ctrl+click to QUIT\n alt+F7 - prew\n alt+F8 - play, double click\n alt+F9 - next, click";
     [_statusItem setAction:@selector(itemClicked:)];
     
 //    if (AXIsProcessTrustedWithOptions != NULL) {
@@ -191,7 +190,10 @@ static NSDictionary* map;
         [[NSApplication sharedApplication] terminate:self];
         return;
     }
-    if (event.clickCount == 2){
+    if (event.clickCount == 3){
+        [self sendKeyCode:98];
+    }
+    else if (event.clickCount == 2){
         [self sendKeyCode:101];
     }
     

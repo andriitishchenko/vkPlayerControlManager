@@ -16,7 +16,6 @@
 		4ABB55EC1E54EFA400FEDA74 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB55EB1E54EFA400FEDA74 /* ViewController.m */; };
 		4ABB55EE1E54EFA400FEDA74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ABB55ED1E54EFA400FEDA74 /* Assets.xcassets */; };
 		4ABB55F11E54EFA400FEDA74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ABB55EF1E54EFA400FEDA74 /* Main.storyboard */; };
-		4ABB55F91E54F13000FEDA74 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ABB55F81E54F13000FEDA74 /* icon.png */; };
 		4ABB55FD1E54F62400FEDA74 /* icon_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ABB55FC1E54F62400FEDA74 /* icon_menu@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +34,6 @@
 		4ABB55ED1E54EFA400FEDA74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4ABB55F01E54EFA400FEDA74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4ABB55F21E54EFA400FEDA74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4ABB55F81E54F13000FEDA74 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		4ABB55FC1E54F62400FEDA74 /* icon_menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_menu@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				4ABB55FC1E54F62400FEDA74 /* icon_menu@2x.png */,
-				4ABB55F81E54F13000FEDA74 /* icon.png */,
 				4ABB55E81E54EFA400FEDA74 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -170,7 +167,6 @@
 				4ABB55EE1E54EFA400FEDA74 /* Assets.xcassets in Resources */,
 				4ABB55FD1E54F62400FEDA74 /* icon_menu@2x.png in Resources */,
 				4ABB55F11E54EFA400FEDA74 /* Main.storyboard in Resources */,
-				4ABB55F91E54F13000FEDA74 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +184,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#cp -aR \"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}\" \"${PROJECT_DIR}/..\"\n";
+			shellScript = "cp -aR \"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}\" \"${PROJECT_DIR}/..\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
