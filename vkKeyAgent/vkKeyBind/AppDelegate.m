@@ -32,11 +32,11 @@ static NSDictionary* map;
     NSStatusBar *statusBar = [NSStatusBar systemStatusBar];
     _statusItem = [statusBar statusItemWithLength:NSSquareStatusItemLength];
     
-    NSImage *icon = [NSImage imageNamed:@"icon_menu"];
+    NSImage *icon = [NSImage imageNamed: @"icon_menu"];
     icon.template = YES;
     
     _statusItem.button.image = icon;
-    _statusItem.toolTip = @"ctrl+click to QUIT\n alt+F7 - prew\n alt+F8 - play, double click\n alt+F9 - next, click";
+    _statusItem.toolTip = @"ctrl+click to QUIT\n alt+F7 - prew\n alt+F8 - play/stop, 3- clicks\n alt+F9 - next, 2-clicks";
     [_statusItem setAction:@selector(itemClicked:)];
     
 //    if (AXIsProcessTrustedWithOptions != NULL) {
@@ -191,7 +191,7 @@ static NSDictionary* map;
         return;
     }
     if (event.clickCount == 3){
-        [self sendKeyCode:98];
+        [self sendKeyCode:100];
     }
     else if (event.clickCount == 2){
         [self sendKeyCode:101];

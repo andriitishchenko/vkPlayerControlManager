@@ -13,7 +13,6 @@
 		4A59DF9F1E5B9BF1004FEA04 /* KeyProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A59DF9E1E5B9BF1004FEA04 /* KeyProcessor.m */; };
 		4ABB55E61E54EFA400FEDA74 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB55E51E54EFA400FEDA74 /* AppDelegate.m */; };
 		4ABB55E91E54EFA400FEDA74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB55E81E54EFA400FEDA74 /* main.m */; };
-		4ABB55EC1E54EFA400FEDA74 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB55EB1E54EFA400FEDA74 /* ViewController.m */; };
 		4ABB55EE1E54EFA400FEDA74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ABB55ED1E54EFA400FEDA74 /* Assets.xcassets */; };
 		4ABB55F11E54EFA400FEDA74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ABB55EF1E54EFA400FEDA74 /* Main.storyboard */; };
 		4ABB55FD1E54F62400FEDA74 /* icon_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ABB55FC1E54F62400FEDA74 /* icon_menu@2x.png */; };
@@ -29,8 +28,6 @@
 		4ABB55E41E54EFA400FEDA74 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4ABB55E51E54EFA400FEDA74 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4ABB55E81E54EFA400FEDA74 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4ABB55EA1E54EFA400FEDA74 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4ABB55EB1E54EFA400FEDA74 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4ABB55ED1E54EFA400FEDA74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4ABB55F01E54EFA400FEDA74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4ABB55F21E54EFA400FEDA74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,8 +86,6 @@
 				4A59DF9E1E5B9BF1004FEA04 /* KeyProcessor.m */,
 				4ABB55EF1E54EFA400FEDA74 /* Main.storyboard */,
 				4ABB55E71E54EFA400FEDA74 /* Supporting Files */,
-				4ABB55EA1E54EFA400FEDA74 /* ViewController.h */,
-				4ABB55EB1E54EFA400FEDA74 /* ViewController.m */,
 			);
 			path = vkKeyBind;
 			sourceTree = "<group>";
@@ -184,7 +179,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -aR \"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}\" \"${PROJECT_DIR}/..\"\n";
+			shellScript = "if [ \"${CONFIGURATION}\" != \"Release\" ]; then\n    cp -aR \"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}\" \"${PROJECT_DIR}\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -193,7 +188,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ABB55EC1E54EFA400FEDA74 /* ViewController.m in Sources */,
 				4A59DF9F1E5B9BF1004FEA04 /* KeyProcessor.m in Sources */,
 				4ABB55E91E54EFA400FEDA74 /* main.m in Sources */,
 				4ABB55E61E54EFA400FEDA74 /* AppDelegate.m in Sources */,
