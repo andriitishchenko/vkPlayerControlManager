@@ -24,25 +24,13 @@
 + (KeyProcessor *)sharedInstance{
     static dispatch_once_t  onceToken;
     static KeyProcessor * sSharedInstance;
-    NSLog(@"sharedInstance CALL");
     dispatch_once(&onceToken, ^{
         sSharedInstance = [KeyProcessor new];
         sSharedInstance.state = NO;
-//        sSharedInstance.observers = [NSMutableArray<KeyProcessorDelegate> new];
     });
     
     return sSharedInstance;
 }
-
-//-(void)dealloc{
-//    [self.observers removeAllObjects];
-//    self.observers = nil;
-//}
-
-
-//-(void)addEventListener:(id<KeyProcessorDelegate>)object{
-//    
-//}
 
 -(BOOL)start{
     NSDictionary *options = @{(__bridge id)kAXTrustedCheckOptionPrompt: @NO};
@@ -68,12 +56,12 @@
         
         if (machPortRef == NULL)
         {
-            printf("CGEventTapCreate failed!\n");
+            NSLog(@"CGEventTapCreate failed!\n");
         } else {
             eventSrc = CFMachPortCreateRunLoopSource(NULL, machPortRef, 0);
             if ( eventSrc == NULL )
             {
-                printf( "No event run loop src?\n" );
+                NSLog( @"No event run loop src?\n" );
             }else {
                 CFRunLoopRef runLoop =  CFRunLoopGetCurrent(); //GetCFRunLoopFromEventLoop(GetMainEventLoop ());
                 

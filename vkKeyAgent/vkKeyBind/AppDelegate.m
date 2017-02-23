@@ -68,12 +68,9 @@ static NSDictionary* map;
                               NSKeyValueObservingOptionOld)
                      context:KeyProcessorEventContext];
         
-        
-        NSLog(@"-[AppDelegate testNSWorkspace:]");
+        //detect other apps launch and termination
         NSNotificationCenter *  center;
-        // Get the custom notification center.
         center = [[NSWorkspace sharedWorkspace] notificationCenter];
-        // Install the notifications.
         [center addObserver:self
                    selector:@selector(appLaunched:)
                        name:NSWorkspaceDidLaunchApplicationNotification
@@ -160,27 +157,28 @@ static NSDictionary* map;
     }
 }
 
-
-
--(void)sendALTDown:(BOOL)isDown
-{
-    CGEventRef key = CGEventCreateKeyboardEvent (NULL, (CGKeyCode)65535, isDown==YES);
-    CGEventPostToPSN (&_psnSafari, key);
-    CFRelease(key);
-}
-
-
 -(void)sendKeyCode:(CGKeyCode)keyKode
 {
-    [self sendALTDown:YES];
-    CGEventRef keyup, keydown;
-    keydown = CGEventCreateKeyboardEvent (NULL, keyKode, true);
-    keyup = CGEventCreateKeyboardEvent (NULL, keyKode, false);
-    CGEventPostToPSN (&_psnSafari, keydown);
-    CGEventPostToPSN (&_psnSafari, keyup);
-    CFRelease(keydown);
-    CFRelease(keyup);
-    [self sendALTDown:NO];
+    @try {
+        if (_psnSafari.highLongOfPSN ==0 && _psnSafari.lowLongOfPSN==0) {
+            NSLog(@"Invalid Safari process, event canceled");
+            return;
+        }
+        CGEventRef keyup, keydown;
+        keydown = CGEventCreateKeyboardEvent (NULL, keyKode, true);
+        CGEventSetFlags(keydown, kCGEventFlagMaskAlternate);
+        CGEventPostToPSN (&_psnSafari, keydown);
+        CFRelease(keydown);
+        
+        keyup = CGEventCreateKeyboardEvent (NULL, keyKode, false);
+        CGEventSetFlags(keyup, kCGEventFlagMaskAlternate);
+        CGEventPostToPSN (&_psnSafari, keyup);
+        CFRelease(keyup);
+        
+    } @catch (NSException *exception) {
+        NSLog(@"Excp:%@",exception.description);
+    }
+    
 }
 
 - (void)itemClicked:(id)sender {
@@ -191,15 +189,11 @@ static NSDictionary* map;
         return;
     }
     if (event.clickCount == 3){
-        [self sendKeyCode:100];
+        [self sendKeyCode:(CGKeyCode)100];
     }
     else if (event.clickCount == 2){
-        [self sendKeyCode:101];
+        [self sendKeyCode:(CGKeyCode)101];
     }
-    
-//    [[NSApplication sharedApplication].keyWindow makeKeyAndOrderFront:nil];
-//    [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
-//    [[NSApplication sharedApplication].mainWindow makeKeyAndOrderFront:self];
 }
 
 
